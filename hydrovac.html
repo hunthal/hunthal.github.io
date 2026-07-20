@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HydroVac automated bilge pump and water-ingress warning system by Hal Hunter." />
+  <title>HydroVac | Hal Hunter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page accent-teal">
+  <nav class="project-nav" aria-label="Primary navigation"><ul class="navbar"><li><a href="index.html">Home</a></li><li class="dropdown"><a href="#">Projects ▾</a><ul class="dropdown-content">
+    <li><a href="hydrovac.html" aria-current="page">HydroVac</a></li><li><a href="screwit.html">ScrewIt</a></li><li><a href="skateboard.html">Electric Skateboard</a></li><li><a href="vice.html">SolidWorks Vice</a></li><li><a href="radar.html">Radar Detector</a></li><li><a href="rocket.html">Butane Rocket</a></li>
+  </ul></li><li><a href="index.html#contact">Contact Me</a></li></ul></nav>
+
+  <main class="project-main">
+    <section class="project-hero">
+      <div class="project-hero-text"><p class="project-eyebrow">A-Level Design & Engineering Project | 2023–2024</p><h1>HydroVac</h1><p class="project-lead">An automated bilge pump and water-ingress warning system for small powerboats and rowing launches.</p><p>HydroVac detects water collecting in the bilge, alerts the user and activates a pump to remove it. The prototype integrates an Arduino-controlled circuit, moisture sensor, relay, pump and flexible pass-through bung inside a modular water-resistant enclosure.</p><ul class="project-tags"><li>SolidWorks</li><li>Arduino</li><li>Embedded Systems</li><li>3D Printing</li><li>FEA</li></ul></div>
+      <figure class="hero-media"><img src="images/hydrovac-render-front.jpg" alt="HydroVac complete CAD assembly" /><figcaption>Final CAD assembly showing the pump enclosure, electronics housing, tubing and flexible bung.</figcaption></figure>
+    </section>
+
+    <section class="project-section"><div class="section-heading"><p class="section-number">01</p><div><h2>The Design Challenge</h2><p>Preventing unnoticed water ingress without continuous manual inspection.</p></div></div><div class="two-column-layout"><article><h3>Identifying the problem</h3><p>Research with powerboat users and rowing coaches showed that forgotten or poorly sealed bungs could allow significant water into a boat. Small launches also lacked a simple way to monitor the bilge without opening a rear compartment.</p></article><article class="requirement-card"><h3>Key requirements</h3><ul><li>Detect and remove water automatically</li><li>Alert the user</li><li>Seal the drainage hole</li><li>Protect sensitive electronics</li><li>Mount securely without obstruction</li><li>Remain compact and maintainable</li></ul></article></div></section>
+
+    <section class="project-section"><div class="section-heading"><p class="section-number">02</p><div><h2>System Operation</h2><p>An automated sensing and pumping feedback loop.</p></div></div><div class="process-grid"><article class="process-card"><span>01</span><h3>Detect</h3><p>A Grove moisture sensor detects water near the bottom of the boat.</p></article><article class="process-card"><span>02</span><h3>Process</h3><p>The Arduino evaluates the sensor input and controls the system outputs.</p></article><article class="process-card"><span>03</span><h3>Activate</h3><p>A buzzer warns the user while a relay closes the separate pump circuit.</p></article><article class="process-card"><span>04</span><h3>Remove</h3><p>The pump discharges water through the bung until the sensor is dry.</p></article></div></section>
+
+    <section class="project-section"><div class="section-heading"><p class="section-number">03</p><div><h2>CAD and Manufacturing</h2><p>Separate enclosures reduced the risk of pump water reaching the electronics.</p></div></div><div class="media-gallery"><figure><img src="images/hydrovac-render-mounted.jpg" alt="Rear rendering of HydroVac" /><figcaption>Rear view showing the mounting plate, switch, tubing and bung.</figcaption></figure><figure><img src="images/hydrovac-exploded-detail.jpg" alt="HydroVac detailed exploded view" /><figcaption>Exploded view of the pump, Arduino boards, sensor, relay and housings.</figcaption></figure><figure class="wide-render"><img src="images/hydrovac-exploded-wide.jpg" alt="HydroVac wide exploded view" /><figcaption>Complete system architecture and component arrangement.</figcaption></figure></div></section>
+
+    <section class="project-section"><div class="section-heading"><p class="section-number">04</p><div><h2>Prototype Testing</h2><p>The final system was evaluated in context inside a boat.</p></div></div><div class="results-grid"><article class="result-card"><strong>2 L/min</strong><span>Rated pump flow</span></article><article class="result-card"><strong>500 N</strong><span>FEA test load</span></article><article class="result-card"><strong>0.045 mm</strong><span>Pump-case displacement</span></article><article class="result-card"><strong>No ingress</strong><span>Inside electronics enclosure</span></article></div><div class="two-column-layout"><article><h3>Successful functions</h3><p>The moisture sensor activated the pump when water was added and stopped it once the water was removed. The electronics remained dry during partial submersion, and the rail-and-runner mount held the product securely.</p></article><article><h3>Future improvements</h3><p>Testing identified minor leakage around the bung, kinking in the tubing and debris risk at the pump inlet. Proposed revisions included interchangeable threaded bungs, detachable tubing, an inlet filter and a remotely mounted sensor.</p></article></div></section>
+
+    <section class="project-outcome"><p class="section-number">05</p><h2>Project Outcome</h2><p>HydroVac integrated an automated bilge pump, water-ingress warning system and pass-through bung into one compact prototype. The project strengthened my experience in mechanical design, embedded control, electronics integration, additive manufacturing and validation.</p></section>
+  </main>
+  <footer><p>© 2026 Hal Hunter. All rights reserved.</p></footer>
+</body>
+</html>

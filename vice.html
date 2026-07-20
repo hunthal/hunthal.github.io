@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SolidWorks vice mechanism assembly, drawing and finite element analysis by Hal Hunter." />
+  <title>SolidWorks Vice | Hal Hunter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page accent-steel">
+  <nav class="project-nav" aria-label="Primary navigation">
+    <ul class="navbar"><li><a href="index.html">Home</a></li><li class="dropdown"><a href="#">Projects ▾</a><ul class="dropdown-content">
+      <li><a href="hydrovac.html">HydroVac</a></li><li><a href="screwit.html">ScrewIt</a></li><li><a href="skateboard.html">Electric Skateboard</a></li><li><a href="vice.html" aria-current="page">SolidWorks Vice</a></li><li><a href="radar.html">Radar Detector</a></li><li><a href="rocket.html">Butane Rocket</a></li>
+    </ul></li><li><a href="index.html#contact">Contact Me</a></li></ul>
+  </nav>
+
+  <main class="project-main">
+    <section class="project-hero">
+      <div class="project-hero-text">
+        <p class="project-eyebrow">SolidWorks Assembly Project</p>
+        <h1>SolidWorks Vice</h1>
+        <p class="project-lead">A motion-enabled scissor-action mechanism developed as a complete SolidWorks assembly.</p>
+        <p>The project focused on component modelling, assembly mates, technical drawing production and structural evaluation. Crossed arms translate horizontal sliding motion into controlled vertical movement of the upper plate.</p>
+        <ul class="project-tags"><li>SolidWorks</li><li>Assemblies</li><li>Mechanical Mates</li><li>Technical Drawings</li><li>FEA</li></ul>
+      </div>
+      <figure class="hero-media"><img src="images/vice-hero.png" alt="SolidWorks rendering of the vice mechanism" /><figcaption>Complete assembly with crossed arms connecting the fixed base and moving upper plate.</figcaption></figure>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">01</p><div><h2>Assembly Design</h2><p>Constraining each component while retaining the mechanism’s intended degree of freedom.</p></div></div>
+      <div class="two-column-layout">
+        <article><h3>Mates and motion</h3><p>Sliding mates between the base rails and lower arms allow the crossed links to move along the base while preventing unwanted lateral movement. The fixed bars act as pivot points, and pin connections allow the arms to rotate as the upper plate rises and falls.</p></article>
+        <article><h3>Design for manufacture</h3><p>The upper and lower plates were considered as cast iron or steel parts for strength and rigidity. The lighter aluminium arms could be cut from sheet, while widened pin ends retain each joint with limited machining and a straightforward assembly sequence.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">02</p><div><h2>Motion Study</h2><p>The completed assembly was tested through its full operating movement inside SolidWorks.</p></div></div>
+      <figure class="video-figure"><video class="project-video" controls muted loop playsinline poster="images/vice-hero.png"><source src="videos/vice-project.mp4" type="video/mp4" />Your browser does not support embedded video.</video><figcaption>SolidWorks motion demonstration showing the upper plate translating vertically as the crossed arms rotate and slide.</figcaption></figure>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">03</p><div><h2>Drawing and Structural Analysis</h2><p>Technical documentation and finite element analysis were used to communicate and evaluate the design.</p></div></div>
+      <div class="results-grid"><article class="result-card"><strong>10,000 N</strong><span>Applied FEA load</span></article><article class="result-card"><strong>5×</strong><span>Factor of safety across much of plate</span></article><article class="result-card"><strong>3 views</strong><span>Orthographic documentation</span></article><article class="result-card"><strong>1 assembly</strong><span>Fully mated mechanism</span></article></div>
+      <div class="media-gallery">
+        <figure class="wide-render"><img src="images/vice-drawing.jpg" alt="Technical drawing of the vice mechanism" /><figcaption>Dimensioned orthographic drawing defining the principal assembly geometry.</figcaption></figure>
+        <figure><img src="images/vice-fos.png" alt="Factor of safety analysis of vice top plate" /><figcaption>Factor-of-safety plot under a 10,000 N distributed load.</figcaption></figure>
+        <figure><img src="images/vice-stress.png" alt="Stress analysis of vice top plate" /><figcaption>Stress concentration around unsupported regions and rail overhangs.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="project-outcome"><p class="section-number">04</p><h2>Project Outcome</h2><p>The project developed my ability to construct multi-part SolidWorks assemblies, control mechanism motion with mates, communicate geometry through engineering drawings and use FEA to identify load paths and structurally weaker regions.</p></section>
+  </main>
+  <footer><p>© 2026 Hal Hunter. All rights reserved.</p></footer>
+</body>
+</html>

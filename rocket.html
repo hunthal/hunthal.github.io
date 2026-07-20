@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Physics-based Python model for a butane-powered rocket developed in MEAM 2480." />
+  <title>Butane Rocket Modelling | Hal Hunter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page accent-red">
+  <nav class="project-nav" aria-label="Primary navigation"><ul class="navbar"><li><a href="index.html">Home</a></li><li class="dropdown"><a href="#">Projects ▾</a><ul class="dropdown-content">
+    <li><a href="hydrovac.html">HydroVac</a></li><li><a href="screwit.html">ScrewIt</a></li><li><a href="skateboard.html">Electric Skateboard</a></li><li><a href="vice.html">SolidWorks Vice</a></li><li><a href="radar.html">Radar Detector</a></li><li><a href="rocket.html" aria-current="page">Butane Rocket</a></li>
+  </ul></li><li><a href="index.html#contact">Contact Me</a></li></ul></nav>
+
+  <main class="project-main">
+    <section class="project-hero">
+      <div class="project-hero-text">
+        <p class="project-eyebrow">MEAM 2480 Team Project | Spring 2026</p>
+        <h1>Butane Rocket</h1>
+        <p class="project-lead">A physics-based Python model developed to predict the landing position of a butane-powered bottle rocket.</p>
+        <p>The project combined thermodynamics, fluid mechanics, rigid-body motion and experimental calibration. Given the water mass, water temperature and launch angle, the model simulated the thrust phase and subsequent trajectory to predict downrange distance.</p>
+        <ul class="project-tags"><li>Python</li><li>Coupled ODEs</li><li>Thermodynamics</li><li>Model Calibration</li><li>Experimental Validation</li></ul>
+      </div>
+      <figure class="hero-media"><img src="images/rocket-assembly.jpg" alt="Completed butane rocket with nose cone and stabilizing fins" /><figcaption>Two-litre bottle rocket with added nose mass and angled stabilizing fins.</figcaption></figure>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">01</p><div><h2>Modelling Objective</h2><p>Predicting range from three controllable launch parameters.</p></div></div>
+      <div class="two-column-layout">
+        <article><h3>Model inputs</h3><p>The model accepted water mass, water temperature and launch angle. The physical rocket used a 2 L bottle, 15 g of butane, a 50 g nose mass and angled PLA fins that induced axial rotation for improved stability.</p></article>
+        <article class="requirement-card"><h3>Required outputs</h3><ul><li>Internal pressure over time</li><li>Water and butane mass flow</li><li>Thrust during water expulsion</li><li>Two-dimensional trajectory</li><li>Predicted landing distance</li></ul></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">02</p><div><h2>Model Architecture</h2><p>A coupled set of ordinary differential equations represented the launch physics.</p></div></div>
+      <div class="process-grid">
+        <article class="process-card"><span>01</span><h3>Water flow</h3><p>Bernoulli’s steady-flow equation related bottle pressure to water mass flow through the nozzle.</p></article>
+        <article class="process-card"><span>02</span><h3>Gas volume</h3><p>Volume conservation increased the gas volume as water was expelled from the fixed-volume bottle.</p></article>
+        <article class="process-card"><span>03</span><h3>Butane phase</h3><p>First-law and mass-balance relations modelled evaporation and the changing gas mass.</p></article>
+        <article class="process-card"><span>04</span><h3>Trajectory</h3><p>Numerical integration advanced the rocket until it returned to ground level, including gravity and drag.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">03</p><div><h2>Calibration and Assumptions</h2><p>Experimental data converted an idealized model into a more useful predictor.</p></div></div>
+      <div class="two-column-layout">
+        <article><h3>Experimental calibration</h3><p>Launch data covered water temperatures of 15.9–37°C, water masses of 350–750 g and angles of 31–80°. The discharge coefficient, latent heat and butane heat-capacity parameters were fitted by minimizing mean-squared error between predicted and measured distance.</p></article>
+        <article><h3>Model limitations</h3><p>The model assumed constant temperature during the pressure calculation, fixed nozzle area, constant drag coefficient, two-dimensional motion and no internal fluid movement. Launch-to-launch variation in butane loading and release method introduced additional uncertainty.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">04</p><div><h2>Validation</h2><p>Demonstration launches tested how well the calibrated model generalized.</p></div></div>
+      <div class="results-grid"><article class="result-card"><strong>23.2 m</strong><span>Predicted range</span></article><article class="result-card"><strong>25.4 m</strong><span>Second measured range</span></article><article class="result-card"><strong>9.5%</strong><span>Second-launch error</span></article><article class="result-card"><strong>222 g</strong><span>Final rocket mass</span></article></div>
+      <div class="two-column-layout">
+        <article><h3>First launch</h3><p>The rocket travelled 14.25 m, producing 38.6% error. A nontrivial portion of the butane was spilled during loading, reducing the available energy and explaining much of the shortfall.</p></article>
+        <article><h3>Second launch</h3><p>With more consistent butane loading, the rocket travelled 25.4 m—2.2 m beyond the prediction and within 9.5%. Remaining error was linked to modelling assumptions and a 20 g mass difference between the calibration and demonstration rockets.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">05</p><div><h2>Physical Testing</h2><p>The model was developed alongside repeated launch experiments.</p></div></div>
+      <div class="media-gallery">
+        <figure class="portrait-media"><img src="images/rocket-assembly.jpg" alt="Annotated butane rocket prototype" /><figcaption>Rocket assembly with nose cone and four stabilizing fins.</figcaption></figure>
+        <figure class="portrait-media"><img src="images/rocket-launch.jpg" alt="Butane rocket being launched from an angled stand" /><figcaption>Outdoor launch used to compare measured distance with the model prediction.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="project-outcome"><p class="section-number">06</p><h2>Project Outcome</h2><p>The final model linked first-principles equations with experimental fitting and produced a range prediction within 9.5% on the more consistent demonstration launch. The project developed my experience building coupled dynamic models, selecting assumptions, calibrating unknown parameters and diagnosing discrepancies between simulations and real systems.</p></section>
+  </main>
+  <footer><p>© 2026 Hal Hunter. All rights reserved.</p></footer>
+</body>
+</html>

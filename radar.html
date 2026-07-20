@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pico-controlled ultrasonic radar detector developed by Hal Hunter and teammates for ENGR 1050." />
+  <title>Radar Detector | Hal Hunter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page accent-blue">
+  <nav class="project-nav" aria-label="Primary navigation"><ul class="navbar"><li><a href="index.html">Home</a></li><li class="dropdown"><a href="#">Projects ▾</a><ul class="dropdown-content">
+    <li><a href="hydrovac.html">HydroVac</a></li><li><a href="screwit.html">ScrewIt</a></li><li><a href="skateboard.html">Electric Skateboard</a></li><li><a href="vice.html">SolidWorks Vice</a></li><li><a href="radar.html" aria-current="page">Radar Detector</a></li><li><a href="rocket.html">Butane Rocket</a></li>
+  </ul></li><li><a href="index.html#contact">Contact Me</a></li></ul></nav>
+
+  <main class="project-main">
+    <section class="project-hero">
+      <div class="project-hero-text">
+        <p class="project-eyebrow">ENGR 1050 Team Project | Fall 2025</p>
+        <h1>Radar Detector</h1>
+        <p class="project-lead">A controllable ultrasonic ranging system with a live radar-style display.</p>
+        <p>Our team built a Raspberry Pi Pico-based device that rotates an ultrasonic sensor, measures the position of objects and transmits angle-distance data to a Pygame visualization. Two physical buttons allow the operator to control the direction of the sensor.</p>
+        <ul class="project-tags"><li>MicroPython</li><li>Raspberry Pi Pico</li><li>Pygame</li><li>Ultrasonic Sensing</li><li>Serial Communication</li></ul>
+      </div>
+      <figure class="hero-media"><img src="images/radar-display.jpg" alt="Radar detector connected to a live computer display" /><figcaption>Completed system with the Pico hardware and live radar HUD operating together.</figcaption></figure>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">01</p><div><h2>System Architecture</h2><p>Connecting sensing, motion control, serial communication and visualization.</p></div></div>
+      <div class="process-grid">
+        <article class="process-card"><span>01</span><h3>Position</h3><p>An MG90S servo rotates the HC-SR04 ultrasonic sensor through a commanded angle.</p></article>
+        <article class="process-card"><span>02</span><h3>Measure</h3><p>The Pico calculates range from the round-trip duration of each ultrasonic pulse.</p></article>
+        <article class="process-card"><span>03</span><h3>Transmit</h3><p>Angle and distance values are sent to the laptop over a 115200-baud serial connection.</p></article>
+        <article class="process-card"><span>04</span><h3>Display</h3><p>Pygame converts polar measurements into a moving sweep line and fading detection blips.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">02</p><div><h2>Hardware and Software</h2><p>The project required coordinated development across the physical circuit and two Python programs.</p></div></div>
+      <div class="two-column-layout">
+        <article><h3>Pico control code</h3><p>MicroPython configured PWM for the servo, trigger and echo pins for the sensor, and pull-up inputs for the left and right buttons. The program mapped angles from 0–180° into the servo duty-cycle range and returned a maximum value when the sensor timed out.</p></article>
+        <article><h3>Radar visualization</h3><p>The desktop program read serial data, drew range arcs and 30° angle divisions, converted polar coordinates to screen positions and maintained a fading history of detected objects. A 100 cm display range was selected for the laboratory environment.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading"><p class="section-number">03</p><div><h2>Testing</h2><p>Bench testing checked object detection, controllability and distance accuracy.</p></div></div>
+      <div class="results-grid"><article class="result-card"><strong>180°</strong><span>Servo command range</span></article><article class="result-card"><strong>2°</strong><span>Control step size</span></article><article class="result-card"><strong>5 cm</strong><span>Close-range check</span></article><article class="result-card"><strong>40 cm</strong><span>Extended-range check</span></article></div>
+      <div class="media-gallery">
+        <figure><img src="images/radar-setup.jpg" alt="Close view of Pico, breadboard, servo and ultrasonic sensor" /><figcaption>Pico, breadboard, servo and ultrasonic sensor wiring.</figcaption></figure>
+        <figure><img src="images/radar-display.jpg" alt="Radar detector displaying an object on a laptop" /><figcaption>Live Pygame display plotting a detected object at the measured angle and distance.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="project-outcome"><p class="section-number">04</p><h2>Project Outcome</h2><p>The system met the team’s success criteria: it detected stationary and moving objects, identified objects as the field of view moved over them, and reproduced 5 cm and 40 cm test distances on the radar display. The project strengthened my experience with embedded Python, PWM, sensors, serial data and real-time visualization.</p></section>
+  </main>
+  <footer><p>© 2026 Hal Hunter. All rights reserved.</p></footer>
+</body>
+</html>
